@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>A &amp; B - Casamento em Acapulco 2027</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&amp;family=Playfair+Display:ital,wght@0,400;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white pb-16 md:pb-0">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary-fixed-dim/30 h-16 md:h-20 transition-all">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full h-full max-w-container-max mx-auto">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 md:text-headline-h4 text-primary italic">A &amp; B</div>
+            <nav class="hidden md:flex gap-stack-lg items-center">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lista-presentes.html">Presentes</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="sobre-nos.html">Sobre Nós</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lua-de-mel.html">Lua de Mel</a>
+            </nav>
+            <button class="bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
+                RSVP
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-16 md:pt-20">
+        <!-- Hero Banner -->
+        <section class="relative h-[600px] md:h-[870px] w-full overflow-hidden">
+            <img class="absolute inset-0 w-full h-full object-cover" data-alt="A romantic wide shot of a couple embracing on a pristine white sand beach in Acapulco during a vibrant golden hour sunset." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LDkG4U_DQ7VQuCx13a_wIsAF0CbUvEbakQDTTcofxBKSCS_k8MjhAyYfEpHEE2zcwa65WLhXEHHWCmntVGAgP1Frh04smum0gbMMHDC2FkX3_4zXxNRBt-nwQRXPbm3-FiV0y-wGTEvDwDReegwgWov8QXB3dtz7pj0u6HO5l3HkviaL1XQjVOA70aORE2c5pUwmApvmbui5PVycpQi_cuuQ2VDn4glhv9wnn_NeDmlJd-xKe5jQ_gEw-DMa5Q58T598ZokKsuQm"/>
+            <div class="absolute inset-0 hero-gradient flex flex-col items-center justify-center text-center px-margin-mobile">
+                <h1 class="font-display-hero-mobile md:font-display-hero text-[42px] md:text-display-hero text-white italic drop-shadow-lg mb-4">A &amp; B</h1>
+                <p class="font-headline-h5 md:font-headline-h4 text-white uppercase tracking-widest mb-2 drop-shadow-md">19 de Julho de 2027</p>
+                <p class="font-body-lg md:font-headline-h5 text-white italic drop-shadow-md">Acapulco, México</p>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="bg-surface-container-low py-stack-md md:py-stack-lg border-b border-outline-variant/30 scroll-reveal">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <h2 class="font-label-caps text-primary mb-stack-md uppercase tracking-widest">Contagem Regressiva</h2>
+                <div class="flex justify-center gap-4 md:gap-16" id="countdown">
+                    <div class="flex flex-col">
+                        <span class="font-display-hero-mobile md:font-display-hero text-headline-h4 md:text-headline-h2 text-primary" id="days">--</span>
+                        <span class="font-label-caps text-[10px] md:text-[12px] text-on-surface-variant">DIAS</span>
+                    </div>
+                    <span class="font-display-hero text-secondary-container self-start md:self-auto">:</span>
+                    <div class="flex flex-col">
+                        <span class="font-display-hero-mobile md:font-display-hero text-headline-h4 md:text-headline-h2 text-primary" id="hours">--</span>
+                        <span class="font-label-caps text-[10px] md:text-[12px] text-on-surface-variant">HORAS</span>
+                    </div>
+                    <span class="font-display-hero text-secondary-container self-start md:self-auto">:</span>
+                    <div class="flex flex-col">
+                        <span class="font-display-hero-mobile md:font-display-hero text-headline-h4 md:text-headline-h2 text-primary" id="minutes">--</span>
+                        <span class="font-label-caps text-[10px] md:text-[12px] text-on-surface-variant">MINS</span>
+                    </div>
+                    <span class="font-display-hero text-secondary-container self-start md:self-auto">:</span>
+                    <div class="flex flex-col">
+                        <span class="font-display-hero-mobile md:font-display-hero text-headline-h4 md:text-headline-h2 text-primary" id="seconds">--</span>
+                        <span class="font-label-caps text-[10px] md:text-[12px] text-on-surface-variant">SEGS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Cards Section (Bento Grid Inspired) -->
+        <section class="py-16 md:py-24 bg-background scroll-reveal">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-stack-md md:gap-stack-lg">
+                    <!-- Nossa História Card -->
+                    <div class="md:col-span-7 relative group overflow-hidden rounded-xl border border-secondary-container h-[350px] md:h-[450px]">
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An intimate close-up of a couple's hands intertwined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LDkG4U_DQ7VQuCx13a_wIsAF0CbUvEbakQDTTcofxBKSCS_k8MjhAyYfEpHEE2zcwa65WLhXEHHWCmntVGAgP1Frh04smum0gbMMHDC2FkX3_4zXxNRBt-nwQRXPbm3-FiV0y-wGTEvDwDReegwgWov8QXB3dtz7pj0u6HO5l3HkviaL1XQjVOA70aORE2c5pUwmApvmbui5PVycpQi_cuuQ2VDn4glhv9wnn_NeDmlJd-xKe5jQ_gEw-DMa5Q58T598ZokKsuQm"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-stack-md md:p-stack-lg">
+                            <h3 class="font-display-hero-mobile md:font-display-hero text-headline-h4 md:text-headline-h3 text-white italic mb-2">Nossa História</h3>
+                            <p class="text-white/90 font-body-md mb-stack-md max-w-md">De uma amizade sincera a uma vida inteira de aventuras. Conheça os momentos que nos trouxeram até aqui.</p>
+                            <a class="inline-flex items-center gap-2 text-white font-label-caps hover:gap-4 transition-all duration-300" href="sobre-nos.html">
+                                LER MAIS <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Lista de Presentes Card -->
+                    <div class="md:col-span-5 flex flex-col gap-stack-md md:gap-stack-lg">
+                        <div class="bg-surface-container-high p-stack-md md:p-stack-lg rounded-xl border border-secondary-container flex-1 flex flex-col justify-between group transition-all hover:bg-secondary-container/20 cursor-pointer" onclick="location.href='lista-presentes.html'">
+                            <div>
+                                <span class="material-symbols-outlined text-primary text-3xl md:text-4xl mb-4">card_giftcard</span>
+                                <h3 class="font-headline-h5 md:font-headline-h4 text-primary mb-2">Lista de Presentes</h3>
+                                <p class="font-body-md text-on-surface-variant">Sua presença é o nosso maior presente, mas se desejar nos presentear, preparamos uma seleção especial.</p>
+                            </div>
+                            <button class="mt-stack-md bg-primary text-on-primary py-2 md:py-3 rounded-lg font-label-caps hover:shadow-lg transition-all active:scale-95">
+                                VER LISTA COMPLETA
+                            </button>
+                        </div>
+                        <!-- Lua de Mel Card -->
+                        <div class="bg-primary text-on-primary p-stack-md md:p-stack-lg rounded-xl flex-1 flex flex-col justify-between group overflow-hidden relative cursor-pointer" onclick="location.href='lua-de-mel.html'">
+                            <div class="relative z-10">
+                                <span class="material-symbols-outlined text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+                                <h3 class="font-headline-h5 md:font-headline-h4 mb-2">Cotas de Lua de Mel</h3>
+                                <p class="font-body-md text-white/90">Ajude-nos a criar memórias inesquecíveis em nossa primeira viagem como casados.</p>
+                            </div>
+                            <button class="relative z-10 mt-stack-md bg-white text-primary py-2 md:py-3 rounded-lg font-label-caps hover:bg-surface-bright transition-all">
+                                CONTRIBUIR
+                            </button>
+                            <span class="material-symbols-outlined absolute -right-4 -bottom-4 text-white/10 text-8xl md:text-9xl">beach_access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Teaser -->
+        <section class="py-16 md:py-24 bg-surface-container-lowest scroll-reveal">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
+                <div class="order-2 md:order-1 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl border border-primary-fixed-dim">
+                    <img class="w-full h-full object-cover" data-alt="A luxurious coastal villa overlooking the turquoise waters of Acapulco Bay at twilight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LDkG4U_DQ7VQuCx13a_wIsAF0CbUvEbakQDTTcofxBKSCS_k8MjhAyYfEpHEE2zcwa65WLhXEHHWCmntVGAgP1Frh04smum0gbMMHDC2FkX3_4zXxNRBt-nwQRXPbm3-FiV0y-wGTEvDwDReegwgWov8QXB3dtz7pj0u6HO5l3HkviaL1XQjVOA70aORE2c5pUwmApvmbui5PVycpQi_cuuQ2VDn4glhv9wnn_NeDmlJd-xKe5jQ_gEw-DMa5Q58T598ZokKsuQm"/>
+                    <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="font-display-hero-mobile md:font-display-hero text-headline-h3 md:text-headline-h2 text-primary italic mb-4 md:mb-6">Acapulco nos espera</h2>
+                    <p class="font-body-md md:font-body-lg text-on-surface-variant mb-6 md:mb-8 leading-relaxed">
+                        Escolhemos o cenário paradisíaco de Acapulco para celebrar este novo capítulo. Prepare-se para dias de sol, mar cristalino e uma festa inesquecível sob as estrelas do México.
+                    </p>
+                    <div class="flex items-center gap-2 md:gap-4 text-primary cursor-pointer hover:opacity-80 transition-opacity">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <span class="font-label-caps tracking-widest text-[10px] md:text-xs">MAPA DO LOCAL E DICAS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant/30 fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 md:hidden">
+        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1" href="index.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Início</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="lista-presentes.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">card_giftcard</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Presentes</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="sobre-nos.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">favorite</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Nós</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="lua-de-mel.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">explore</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Lua de Mel</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 mb-16 md:mb-0">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-stack-md md:py-stack-lg gap-stack-sm md:gap-stack-md">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 text-primary italic">A &amp; B</div>
+            <div class="text-secondary font-label-caps text-center text-[10px] md:text-xs">
+                2027 A &amp; B - Wedding in Acapulco
+            </div>
+            <div class="flex gap-4 md:gap-stack-md">
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="painel-administrativo.html">Admin</a>
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
