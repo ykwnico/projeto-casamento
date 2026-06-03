@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lua de Mel - A &amp; B</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&amp;family=Playfair+Display:ital,wght@0,400;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid #FFC2D1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white pb-16 md:pb-0 overflow-x-hidden">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary-fixed-dim/30 h-16 md:h-20 transition-all">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full h-full max-w-container-max mx-auto">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 md:text-headline-h4 text-primary italic">A &amp; B</div>
+            <nav class="hidden md:flex gap-stack-lg items-center">
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lista-presentes.html">Presentes</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="sobre-nos.html">Sobre Nós</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md hover:text-primary transition-colors duration-300" href="lua-de-mel.html">Lua de Mel</a>
+            </nav>
+            <button class="bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
+                RSVP
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-16 md:pt-20 scroll-reveal">
+        <!-- Hero Section -->
+        <section class="relative h-[400px] md:h-[600px] w-full overflow-hidden">
+            <img alt="Acapulco Beach" class="w-full h-full object-cover" data-alt="A panoramic and breathtaking view of the golden beaches in Acapulco at sunset." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeU9cjyI9pm16rMaQxE2QZzwIpgL6_PM20Q2Tk-Y7YkAMUXig4apqvsJ4ttRJhmEBt_wa_TBN5t8XMInTu8EnPJ_RiGDVXvha-UwtRAR4VMUsSj0qVTgiGzC1OWIoYF2fJNAfuvPlrx9WM3M0qFhzesiNKe_G4s_0l-3xOgP04ZiMxy3VAUaJJlmMpqFXVwwPwYqnswSTfB0pnryjum3JWPVhdVQKPiMrTtLa4NAhKyJEK1vknXbme-_IM2zLFMSe6gffhn4vP8p8"/>
+            <div class="absolute inset-0 hero-gradient flex flex-col justify-end items-center pb-stack-lg px-margin-mobile text-center">
+                <h2 class="font-display-hero-mobile md:font-display-hero text-on-background mb-4 italic">Nossa Lua de Mel em Acapulco</h2>
+                <p class="font-body-md md:font-body-lg max-w-2xl text-on-surface-variant">Celebre conosco o início desta nova jornada em um dos destinos mais românticos do mundo.</p>
+            </div>
+        </section>
+
+        <!-- Contribution Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg scroll-reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Text and Purpose -->
+                <div class="space-y-stack-md">
+                    <span class="font-label-caps text-primary uppercase tracking-widest">Contribua com nossa viagem</span>
+                    <h3 class="font-headline-h4 md:font-headline-h3 text-on-background">Um presente em forma de memórias</h3>
+                    <p class="font-body-md text-on-surface-variant">
+                        Ao invés de presentes tradicionais, escolhemos criar memórias inesquecíveis em Acapulco. Sua contribuição nos ajudará a vivenciar momentos mágicos, desde jantares sob o luar até aventuras em alto mar. Cada cota é um pedaço da nossa felicidade que levaremos conosco para sempre.
+                    </p>
+                    <div class="pt-stack-md grid grid-cols-1 sm:grid-cols-3 gap-stack-sm">
+                        <div class="flex flex-col items-center p-4 glass-card rounded-xl text-center">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-2">restaurant</span>
+                            <span class="font-label-caps text-on-surface">Gastronomia</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 glass-card rounded-xl text-center">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-2">sailing</span>
+                            <span class="font-label-caps text-on-surface">Aventura</span>
+                        </div>
+                        <div class="flex flex-col items-center p-4 glass-card rounded-xl text-center">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-2">spa</span>
+                            <span class="font-label-caps text-on-surface">Relaxamento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Amount Form -->
+                <div class="p-8 md:p-12 glass-card rounded-xl shadow-sm border-primary-container/30">
+                    <h4 class="font-headline-h5 md:font-headline-h4 text-center mb-stack-lg">Escolha o Valor da sua Cota</h4>
+                    <form class="space-y-stack-md" id="quota-form" onsubmit="event.preventDefault(); validateAmount();">
+                        <div class="relative group">
+                            <label class="font-label-caps text-on-surface-variant block mb-2" for="amount">Valor da Contribuição (R$)</label>
+                            <div class="flex items-center border-b-2 border-outline-variant focus-within:border-primary transition-colors py-2">
+                                <span class="text-2xl font-body-lg text-on-surface-variant mr-2">R$</span>
+                                <input class="w-full bg-transparent border-none focus:ring-0 text-3xl font-headline-h3 text-on-background placeholder:text-surface-container-highest" id="amount" min="0" placeholder="0,00" step="0.01" type="number"/>
+                            </div>
+                            <p class="text-error font-label-caps text-[10px] mt-2 opacity-0 transition-opacity" id="error-msg">O valor mínimo para contribuição é R$ 100,00.</p>
+                        </div>
+                        <div class="space-y-stack-sm pt-4">
+                            <button class="w-full bg-primary-container text-on-primary font-label-caps py-4 rounded-full text-body-lg font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary-container/20" type="submit">
+                                Contribuir
+                            </button>
+                            <p class="text-center font-label-caps text-[10px] text-on-surface-variant">Pagamento seguro via PIX ou Cartão de Crédito</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Section: What we'll do -->
+        <section class="bg-surface-container py-stack-lg mt-stack-lg scroll-reveal">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-stack-lg">
+                    <h3 class="font-headline-h4 md:font-headline-h3 mb-2">Nossas Experiências</h3>
+                    <p class="font-body-md text-on-surface-variant">Veja como transformaremos seu carinho em momentos inesquecíveis.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Card 1 -->
+                    <div class="group overflow-hidden rounded-xl bg-surface border border-secondary-container hover:shadow-xl transition-all">
+                        <div class="aspect-video overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A luxurious table set for two on a private beach in Acapulco under a canopy of stars." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeU9cjyI9pm16rMaQxE2QZzwIpgL6_PM20Q2Tk-Y7YkAMUXig4apqvsJ4ttRJhmEBt_wa_TBN5t8XMInTu8EnPJ_RiGDVXvha-UwtRAR4VMUsSj0qVTgiGzC1OWIoYF2fJNAfuvPlrx9WM3M0qFhzesiNKe_G4s_0l-3xOgP04ZiMxy3VAUaJJlmMpqFXVwwPwYqnswSTfB0pnryjum3JWPVhdVQKPiMrTtLa4NAhKyJEK1vknXbme-_IM2zLFMSe6gffhn4vP8p8"/>
+                        </div>
+                        <div class="p-stack-md">
+                            <h5 class="font-headline-h5 mb-2">Jantar Romântico</h5>
+                            <p class="font-body-md text-on-surface-variant">Uma noite mágica pé na areia com o melhor da culinária local sob a luz das estrelas.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="group overflow-hidden rounded-xl bg-surface border border-secondary-container hover:shadow-xl transition-all">
+                        <div class="aspect-video overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sleek white sailboat gliding through the sparkling blue waters of Acapulco Bay during a vibrant sunset." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeU9cjyI9pm16rMaQxE2QZzwIpgL6_PM20Q2Tk-Y7YkAMUXig4apqvsJ4ttRJhmEBt_wa_TBN5t8XMInTu8EnPJ_RiGDVXvha-UwtRAR4VMUsSj0qVTgiGzC1OWIoYF2fJNAfuvPlrx9WM3M0qFhzesiNKe_G4s_0l-3xOgP04ZiMxy3VAUaJJlmMpqFXVwwPwYqnswSTfB0pnryjum3JWPVhdVQKPiMrTtLa4NAhKyJEK1vknXbme-_IM2zLFMSe6gffhn4vP8p8"/>
+                        </div>
+                        <div class="p-stack-md">
+                            <h5 class="font-headline-h5 mb-2">Passeio de Barco</h5>
+                            <p class="font-body-md text-on-surface-variant">Explorando as ilhas e grutas secretas da costa mexicana em um dia de sol e mar.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="group overflow-hidden rounded-xl bg-surface border border-secondary-container hover:shadow-xl transition-all">
+                        <div class="aspect-video overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A serene spa setting at a high-end resort overlooking the ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNeU9cjyI9pm16rMaQxE2QZzwIpgL6_PM20Q2Tk-Y7YkAMUXig4apqvsJ4ttRJhmEBt_wa_TBN5t8XMInTu8EnPJ_RiGDVXvha-UwtRAR4VMUsSj0qVTgiGzC1OWIoYF2fJNAfuvPlrx9WM3M0qFhzesiNKe_G4s_0l-3xOgP04ZiMxy3VAUaJJlmMpqFXVwwPwYqnswSTfB0pnryjum3JWPVhdVQKPiMrTtLa4NAhKyJEK1vknXbme-_IM2zLFMSe6gffhn4vP8p8"/>
+                        </div>
+                        <div class="p-stack-md">
+                            <h5 class="font-headline-h5 mb-2">Dia de SPA</h5>
+                            <p class="font-body-md text-on-surface-variant">Um momento de relaxamento total para recarregar as energias após a grande festa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant/30 fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 md:hidden">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="index.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">home</span>
+            <span class="font-label-caps text-[10px]">Início</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="lista-presentes.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">card_giftcard</span>
+            <span class="font-label-caps text-[10px]">Presentes</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="sobre-nos.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">favorite</span>
+            <span class="font-label-caps text-[10px]">Nós</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1" href="lua-de-mel.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+            <span class="font-label-caps text-[10px]">Lua de Mel</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 mb-16 md:mb-0">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-stack-md md:py-stack-lg gap-stack-sm md:gap-stack-md">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 text-primary italic">A &amp; B</div>
+            <div class="text-secondary font-label-caps text-center text-[10px] md:text-xs">
+                2027 A &amp; B - Wedding in Acapulco
+            </div>
+            <div class="flex gap-4 md:gap-stack-md">
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="painel-administrativo.html">Admin</a>
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

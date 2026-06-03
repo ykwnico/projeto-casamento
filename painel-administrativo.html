@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Admin Panel - A &amp; B 2027</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&amp;family=Playfair+Display:ital,wght@0,400;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white min-h-screen flex flex-col">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary-fixed-dim/30 h-16 md:h-20 transition-all">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full h-full max-w-container-max mx-auto">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 md:text-headline-h4 text-primary italic">A &amp; B</div>
+            <nav class="hidden md:flex gap-stack-lg items-center">
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lista-presentes.html">Presentes</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="sobre-nos.html">Sobre Nós</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lua-de-mel.html">Lua de Mel</a>
+            </nav>
+            <button class="bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
+                RSVP
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Canvas -->
+    <main class="flex-grow flex flex-col items-center justify-start pt-24 md:pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto transition-all duration-500">
+        
+        <!-- LOGIN STATE -->
+        <section class="w-full max-w-md mt-8 md:mt-16 flex flex-col items-center" id="login-section">
+            <div class="text-center mb-stack-lg">
+                <span class="material-symbols-outlined text-primary text-5xl mb-stack-sm block">lock_person</span>
+                <h1 class="font-headline-h4 md:font-headline-h3 text-primary mb-stack-sm">Admin</h1>
+                <p class="font-label-caps text-on-surface-variant tracking-widest uppercase">Acesso restrito aos noivos</p>
+            </div>
+            <div class="w-full bg-surface-container-lowest rounded-xl border border-outline-variant p-margin-mobile md:p-margin-desktop shadow-sm">
+                <form class="flex flex-col gap-stack-md" id="login-form">
+                    <div class="flex flex-col gap-1">
+                        <label class="font-label-caps text-on-surface-variant" for="password">Senha</label>
+                        <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary-container focus:ring-0 px-0 py-2 font-body-md text-on-surface transition-colors" id="password" name="password" placeholder="••••••••" type="password"/>
+                    </div>
+                    <button class="mt-stack-sm w-full bg-primary-container text-on-primary-container font-body-md font-medium py-3 px-6 rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-300" type="submit">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- AUTHENTICATED STATE (DASHBOARD) -->
+        <section class="w-full hidden flex-col gap-stack-lg animate-fade-in" id="dashboard-section">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-stack-md border-b border-outline-variant pb-stack-sm">
+                <div>
+                    <h1 class="font-headline-h4 md:font-headline-h3 text-primary">Painel de Controle</h1>
+                    <p class="font-body-md text-on-surface-variant mt-2">Visão geral de presentes e cotas.</p>
+                </div>
+                <button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-caps" id="logout-btn">
+                    <span class="material-symbols-outlined text-sm">logout</span> Sair
+                </button>
+            </div>
+
+            <!-- Totals Summary Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Card 1 -->
+                <div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 flex flex-col justify-between h-full shadow-sm hover:border-primary-container transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+                        <span class="material-symbols-outlined text-6xl text-primary">card_giftcard</span>
+                    </div>
+                    <p class="font-label-caps text-on-surface-variant mb-2">Total em Presentes</p>
+                    <p class="font-display-hero-mobile text-on-surface italic text-4xl">12</p>
+                    <p class="font-label-caps text-status-available mt-2">Itens físicos reservados</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 flex flex-col justify-between h-full shadow-sm hover:border-primary-container transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+                        <span class="material-symbols-outlined text-6xl text-primary">payments</span>
+                    </div>
+                    <p class="font-label-caps text-on-surface-variant mb-2">Total em Cotas</p>
+                    <p class="font-display-hero-mobile text-on-surface italic text-4xl">R$ 8.450</p>
+                    <p class="font-label-caps text-status-available mt-2">Contribuições recebidas</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-primary text-on-primary rounded-xl p-6 flex flex-col justify-between h-full shadow-md relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 pointer-events-none">
+                        <span class="material-symbols-outlined text-6xl text-on-primary">monitoring</span>
+                    </div>
+                    <p class="font-label-caps text-primary-fixed-dim mb-2">Total Geral</p>
+                    <p class="font-display-hero-mobile italic text-4xl">R$ 12.050</p>
+                    <p class="font-label-caps text-primary-fixed-dim mt-2">Estimativa total</p>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col">
+                <div class="p-4 md:p-6 border-b border-outline-variant bg-surface-bright flex justify-between items-center">
+                    <h2 class="font-headline-h5 text-on-surface">Atividades Recentes</h2>
+                    <span class="material-symbols-outlined text-on-surface-variant">filter_list</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-surface-container-low border-b border-outline-variant">
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Convidado</th>
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Presente/Cota</th>
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Valor</th>
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="font-body-md text-on-surface divide-y divide-outline-variant/50">
+                            <tr class="hover:bg-surface transition-colors">
+                                <td class="py-3 md:py-4 px-4 md:px-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">M</div>
+                                    <span>Mariana Silva</span>
+                                </td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">Jogo de Panelas Le Creuset</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6 text-on-surface-variant">-</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full border border-status-reserved text-status-reserved text-xs font-medium">
+                                        Reservado
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface transition-colors">
+                                <td class="py-3 md:py-4 px-4 md:px-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-sm flex-shrink-0">C</div>
+                                    <span>Carlos Eduardo</span>
+                                </td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">Cota: Passeio de Barco</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6 font-medium">R$ 500,00</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full border border-primary-container bg-primary-container/10 text-primary-container text-xs font-medium">
+                                        Pago
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface transition-colors">
+                                <td class="py-3 md:py-4 px-4 md:px-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold text-sm flex-shrink-0">A</div>
+                                    <span>Ana e Pedro</span>
+                                </td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">Máquina de Café Espresso</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6 text-on-surface-variant">-</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full border border-status-reserved text-status-reserved text-xs font-medium">
+                                        Reservado
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface transition-colors">
+                                <td class="py-3 md:py-4 px-4 md:px-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-sm flex-shrink-0">F</div>
+                                    <span>Família Oliveira</span>
+                                </td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">Cota: Jantar Romântico</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6 font-medium">R$ 800,00</td>
+                                <td class="py-3 md:py-4 px-4 md:px-6">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full border border-primary-container bg-primary-container/10 text-primary-container text-xs font-medium">
+                                        Pago
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-stack-md md:py-stack-lg gap-stack-sm md:gap-stack-md">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 text-primary italic">A &amp; B</div>
+            <div class="text-secondary font-label-caps text-center text-[10px] md:text-xs">
+                2027 A &amp; B - Wedding in Acapulco
+            </div>
+            <div class="flex gap-4 md:gap-stack-md">
+                <a class="text-primary font-label-caps underline hover:text-primary-container transition-colors text-[10px] md:text-xs" href="painel-administrativo.html">Admin</a>
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
