@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lista de Presentes - A &amp; B</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&amp;family=Playfair+Display:ital,wght@0,400;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind.config.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white pb-16 md:pb-0">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary-fixed-dim/30 h-16 md:h-20 transition-all">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full h-full max-w-container-max mx-auto">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 md:text-headline-h4 text-primary italic">A &amp; B</div>
+            <nav class="hidden md:flex gap-stack-lg items-center">
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md hover:text-primary transition-colors duration-300" href="lista-presentes.html">Presentes</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="sobre-nos.html">Sobre Nós</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lua-de-mel.html">Lua de Mel</a>
+            </nav>
+            <button class="bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
+                RSVP
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto scroll-reveal">
+        <section class="text-center mb-stack-lg">
+            <h2 class="font-display-hero-mobile md:font-headline-h2 text-primary mb-stack-sm italic">Lista de Presentes</h2>
+            <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Ajude-nos a construir nosso novo lar. Escolha um presente ou contribua com uma cota.</p>
+        </section>
+
+        <!-- Categories / Filters -->
+        <div class="flex overflow-x-auto no-scrollbar gap-stack-sm mb-stack-lg py-2">
+            <button class="flex-shrink-0 px-6 py-2 rounded-full border border-cor-destaque bg-primary-container text-on-primary font-label-caps transition-colors">Todos</button>
+            <button class="flex-shrink-0 px-6 py-2 rounded-full border border-cor-destaque bg-transparent text-on-surface hover:bg-secondary-fixed transition-colors font-label-caps">Eletroeletrônicos</button>
+            <button class="flex-shrink-0 px-6 py-2 rounded-full border border-cor-destaque bg-transparent text-on-surface hover:bg-secondary-fixed transition-colors font-label-caps">Eletrodomésticos</button>
+            <button class="flex-shrink-0 px-6 py-2 rounded-full border border-cor-destaque bg-transparent text-on-surface hover:bg-secondary-fixed transition-colors font-label-caps">Pelúcias</button>
+            <button class="flex-shrink-0 px-6 py-2 rounded-full border border-cor-destaque bg-transparent text-on-surface hover:bg-secondary-fixed transition-colors font-label-caps">Roupa de Cama</button>
+        </div>
+
+        <!-- Gift Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-16">
+            <!-- Card 1 -->
+            <article class="bg-surface-container-lowest border border-cor-destaque rounded-lg overflow-hidden flex flex-col relative transition-transform hover:-translate-y-1 duration-300">
+                <div class="absolute top-4 right-4 bg-status-available text-white font-label-caps px-3 py-1 rounded-full shadow-sm z-10">Disponível</div>
+                <div class="h-64 bg-surface-variant w-full relative overflow-hidden">
+                    <img alt="Smart TV 65 4K" class="object-cover w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANsCBx9ePCCRmmcn2KUvBFhlgq3g6yM2UbxUBdn2ifrw3cr4hRoCi4CS4HUs4-Yl2X6Gcrsxs63IX25-YjusA8SHA8TB3VRbZPwpgmMk0hcDmrKqzo98KfL967qG0hedubv-KB4hDahgJk2rZyXtM3jl7cqej8yPGnUiDiB2qDeuNt_gp6GXUvp1g9nLGJjVGvtHoUAkzKrIGku8vbaK7OlvlOhhVTy05Yznozmtu5QLxQsGYJCVs5alX0g8RI5A_FwzYukDVegvxS"/>
+                </div>
+                <div class="p-stack-md flex-grow flex flex-col">
+                    <h3 class="font-headline-h4 text-on-surface mb-2">Smart TV 65" 4K</h3>
+                    <p class="font-body-md text-on-surface-variant mb-4 flex-grow">Para nossas noites de cinema e séries, com a melhor qualidade de imagem.</p>
+                    <div class="text-primary font-headline-h5 mb-stack-md">R$ 4.500</div>
+                    <div class="flex flex-col gap-stack-sm mt-auto">
+                        <button class="w-full bg-primary-container text-white font-body-md py-3 rounded hover:bg-primary transition-colors min-h-[48px]">Presentear</button>
+                        <button class="w-full bg-transparent border border-cor-destaque text-on-surface font-body-md py-3 rounded hover:bg-surface-variant transition-colors min-h-[48px]">Dividir com alguém</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="bg-surface-container-lowest border border-cor-destaque rounded-lg overflow-hidden flex flex-col relative transition-transform hover:-translate-y-1 duration-300">
+                <div class="absolute top-4 right-4 bg-status-reserved text-on-surface font-label-caps px-3 py-1 rounded-full shadow-sm z-10">Reservado</div>
+                <div class="h-64 bg-surface-variant w-full relative overflow-hidden">
+                    <img alt="Geladeira French Door" class="object-cover w-full h-full opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQLLk7rV9EmRGajFw62DtEqDUjwSs_PEWp2FtZoafIjGGVEzvItDjy6v2SSVn1xyT6QtEkrxwDtPxK8C9ENyjM7EVlfbFEd-lBQ9U4278fPq4XjpLLJ7rjP_cemKJWrBp8v4ey6gj5QpeK2VMbABVjAn9MaXPp4SvSwSuVpaW6c3UkO-xovIioLbZ7tjvYJ8stw8BWb27dQECjLou4GBVBEik0kWSdPGU8ukfoP77opk6sgPeOEjsBM4uOtYbBaiw9yQaDMKTv4FrF"/>
+                </div>
+                <div class="p-stack-md flex-grow flex flex-col">
+                    <h3 class="font-headline-h4 text-on-surface mb-2">Geladeira French Door</h3>
+                    <p class="font-body-md text-on-surface-variant mb-4 flex-grow">O coração da nossa cozinha, para guardar muito amor e comida boa.</p>
+                    <div class="text-primary font-headline-h5 mb-stack-md">R$ 5.800</div>
+                    <div class="flex flex-col gap-stack-sm mt-auto">
+                        <button class="w-full bg-primary-container text-white font-body-md py-3 rounded hover:bg-primary transition-colors min-h-[48px] opacity-50 cursor-not-allowed" disabled="">Presentear</button>
+                        <button class="w-full bg-transparent border border-cor-destaque text-on-surface font-body-md py-3 rounded hover:bg-surface-variant transition-colors min-h-[48px] opacity-50 cursor-not-allowed" disabled="">Dividir com alguém</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="bg-surface-container-lowest border border-cor-destaque rounded-lg overflow-hidden flex flex-col relative transition-transform hover:-translate-y-1 duration-300">
+                <div class="absolute top-4 right-4 bg-status-bought text-white font-label-caps px-3 py-1 rounded-full shadow-sm z-10">Comprado</div>
+                <div class="h-64 bg-surface-variant w-full relative overflow-hidden">
+                    <img alt="Pelúcia Urso Gigante" class="object-cover w-full h-full opacity-50 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU3KUJzGewEODR_zy8sgwe8B9CVHa1ZpfR2JkVkr7xUc9v_Ui0DNovuIfGrqC6LkGGrtg-n1m7Z6u3pQ7zWkkrwIQmxqku5N-Lis65VWCwaYf68x7FaahIEEJeZB8WIrvHAWwERLtSimvJ-DbyeR22qtHKoD4ZwPRaAf4qjq3aEpfIj6yZ93Z3X1GXURj85f-YMBfxwuMBeolmfRgTcTKe3ViK2emZstisDPy8S5nwk8T4LQjtgWKfDkOOcBUMesors_-_fl5KIDRn"/>
+                </div>
+                <div class="p-stack-md flex-grow flex flex-col">
+                    <h3 class="font-headline-h4 text-on-surface mb-2 text-on-surface-variant">Pelúcia Urso Gigante</h3>
+                    <p class="font-body-md text-on-surface-variant mb-4 flex-grow">Um mimo especial e aconchegante para decorar nosso espaço.</p>
+                    <div class="text-on-surface-variant font-headline-h5 mb-stack-md line-through">R$ 350</div>
+                    <div class="flex flex-col gap-stack-sm mt-auto">
+                        <button class="w-full bg-surface-variant text-on-surface-variant font-body-md py-3 rounded cursor-not-allowed min-h-[48px]">Já Presenteado</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant/30 fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 md:hidden">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="index.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">home</span>
+            <span class="font-label-caps text-[10px]">Início</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1" href="lista-presentes.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+            <span class="font-label-caps text-[10px]">Presentes</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="sobre-nos.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">favorite</span>
+            <span class="font-label-caps text-[10px]">Nós</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="lua-de-mel.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">explore</span>
+            <span class="font-label-caps text-[10px]">Lua de Mel</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 mb-16 md:mb-0">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-stack-md md:py-stack-lg gap-stack-sm md:gap-stack-md">
+            <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 text-primary italic">A &amp; B</div>
+            <div class="text-secondary font-label-caps text-center text-[10px] md:text-xs">
+                2027 A &amp; B - Wedding in Acapulco
+            </div>
+            <div class="flex gap-4 md:gap-stack-md">
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="painel-administrativo.html">Admin</a>
+                <a class="text-on-tertiary-fixed-variant font-label-caps hover:text-primary transition-colors text-[10px] md:text-xs" href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
