@@ -29,7 +29,7 @@
                 <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="sobre-nos.html">Sobre Nós</a>
                 <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lua-de-mel.html">Lua de Mel</a>
             </nav>
-            <button class="bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
+            <button class="btn-rsvp-trigger bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
                 RSVP
             </button>
         </div>
@@ -170,6 +170,29 @@
                                     </span>
                                 </td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- RSVP Table -->
+            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col">
+                <div class="p-4 md:p-6 border-b border-outline-variant bg-surface-bright flex justify-between items-center">
+                    <h2 class="font-headline-h5 text-on-surface">Confirmações de Presença (RSVP)</h2>
+                    <button id="btn-clear-rsvps" class="text-error font-label-caps text-xs hover:underline">Limpar Lista</button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-surface-container-low border-b border-outline-variant">
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Nome</th>
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Telefone</th>
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">E-mail</th>
+                                <th class="py-3 md:py-4 px-4 md:px-6 font-label-caps text-on-surface-variant whitespace-nowrap">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rsvp-table-body" class="font-body-md text-on-surface divide-y divide-outline-variant/50">
+                            <!-- RSVP list dynamically loaded -->
                         </tbody>
                     </table>
                 </div>
