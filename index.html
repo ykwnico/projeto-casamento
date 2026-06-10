@@ -22,11 +22,13 @@
     <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary-fixed-dim/30 h-16 md:h-20 transition-all">
         <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full h-full max-w-container-max mx-auto">
             <div class="font-display-hero-mobile md:font-display-hero text-headline-h5 md:text-headline-h4 text-primary italic">A &amp; B</div>
-            <nav class="hidden md:flex gap-stack-lg items-center">
+            <nav class="hidden md:flex gap-4 lg:gap-stack-lg items-center">
                 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md hover:text-primary transition-colors duration-300" href="index.html">Home</a>
                 <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lista-presentes.html">Presentes</a>
                 <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="sobre-nos.html">Sobre Nós</a>
                 <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lua-de-mel.html">Lua de Mel</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="playlist.html">Playlist</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="cardapio.html">Cardápio</a>
             </nav>
             <button class="btn-rsvp-trigger bg-primary text-on-primary px-stack-md md:px-stack-lg py-2 rounded-full font-label-caps hover:scale-95 transition-transform duration-300">
                 RSVP
@@ -139,22 +141,30 @@
     </main>
 
     <!-- BottomNavBar (Mobile Only) -->
-    <nav class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant/30 fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 md:hidden">
-        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1" href="index.html">
+    <nav class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant/30 fixed bottom-0 left-0 w-full z-50 flex justify-start overflow-x-auto no-scrollbar px-4 py-2 md:hidden gap-6 snap-x">
+        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-2 py-1 flex-shrink-0 snap-start" href="index.html">
             <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 1;">home</span>
             <span class="font-label-caps text-label-caps text-[10px]">Início</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="lista-presentes.html">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-2 py-1 rounded-full flex-shrink-0 snap-start" href="lista-presentes.html">
             <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">card_giftcard</span>
             <span class="font-label-caps text-label-caps text-[10px]">Presentes</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="sobre-nos.html">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-2 py-1 rounded-full flex-shrink-0 snap-start" href="sobre-nos.html">
             <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">favorite</span>
             <span class="font-label-caps text-label-caps text-[10px]">Nós</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-4 py-1 rounded-full" href="lua-de-mel.html">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-2 py-1 rounded-full flex-shrink-0 snap-start" href="lua-de-mel.html">
             <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">explore</span>
             <span class="font-label-caps text-label-caps text-[10px]">Lua de Mel</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-2 py-1 rounded-full flex-shrink-0 snap-start" href="playlist.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">music_note</span>
+            <span class="font-label-caps text-[10px]">Playlist</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-secondary-container dark:hover:bg-secondary transition-all px-2 py-1 rounded-full flex-shrink-0 snap-start" href="cardapio.html">
+            <span class="material-symbols-outlined mb-1 text-xl" style="font-variation-settings: 'FILL' 0;">restaurant_menu</span>
+            <span class="font-label-caps text-[10px]">Cardápio</span>
         </a>
     </nav>
 
